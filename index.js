@@ -1,14 +1,7 @@
 // code your solution here
 function superbowlWin(record) {   
-    for (let i = 0; i < record.length; i++) {
-        const item = record[i];
-    
-
-    if (item.result === "W") {
-        return item.year;
-    }
-}
-        return undefined;
+    const winningItem = record.find(item => item.result === "W");
+    return winningItem ? winningItem.year: undefined;
 }
     
 
